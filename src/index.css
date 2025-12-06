@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2d0a0f 0%, #4a1520 50%, #2d0a0f 100%);
+  font-family: 'Crimson Text', serif;
+}
+
+/* Vintage texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.15) 3px
+    );
+  pointer-events: none;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
+}
